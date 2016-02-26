@@ -5,9 +5,7 @@ angular
 ])
 
 .config(['$stateProvider', '$urlRouterProvider', '$locationProvider',function ($stateProvider, $urlRouterProvider, $locationProvider) {
-  /*
-  * Routes and States
-  */
+  
   $stateProvider
     .state('home', {
       url: '/',
@@ -23,15 +21,7 @@ angular
       url: '/search?name=',
       templateUrl: 'doctors/search.html',
       controller: 'SearchCtrl'
-        // function($scope, $stateParams) {
-        // $scope.name = $stateParams.name;
-        // }
-    //   resolve: {
-    //      category: ['$http','$stateParams', function($http, $stateParams) {
-    //          return $http.get('/test/' + $stateParams.name)
-    //                 .then(function(data) { return data.data; });
-    //      }]
-    //  }
+
     })
     .state('doctors', {
         url: '/doctors/{id}',

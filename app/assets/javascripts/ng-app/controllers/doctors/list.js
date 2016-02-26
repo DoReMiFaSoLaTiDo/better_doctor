@@ -4,6 +4,6 @@ angular.module('myApp')
     '$stateParams',
     'doctors',
     function($scope,$stateParams,doctors){
-      $scope.doctors = doctors.doctors; //[$stateParams.id];
+      $scope.doctors = doctors.doctors; 
     }
   ]);
