@@ -4,11 +4,17 @@
     <thead>
       <th>First Name</th>
       <th>Last Name</th>
+      <th>Title</th>
+      <th>Picture</th>
+      <th>Brief Bio</th>
     </thead>
     <tbody>
       <tr ng-repeat="doc in doctors">
-        <td>{{doc.profile.first_name}}</td>
-        <td>{{doc.profile.last_name}}</td>
+        <td><a href="{{doc.attribution_url}}" target="_new">{{doc.profile.first_name}}</a></td>
+        <td>{{doc.profile.last_name}} {{doc.ratings.rating}}</td>
+        <td>{{doc.profile.title}}</td>
+        <td><img src="{{doc.profile.image_url}}"></img></td>
+        <td>{{doc.profile.bio}}</td>
       </tr>
     </tbody>
   </table>
