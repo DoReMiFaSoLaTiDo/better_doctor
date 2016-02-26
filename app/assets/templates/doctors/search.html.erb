@@ -1,0 +1,13 @@
+
+<div class="page-header">
+  <h1>Search View!</h1>
+</div>
+
+<input type="text" ng-model="doc.name"/>
+<input type="button" name="submit">
+<div><h1> Your Search Result Here</h1>
+
+<div ng-repeat="doc in doctors | filter:doc">
+  First Name: {{doc.profile.first_name}} - Last Name: {{doc.profile.last_name}}
+
+</div>
